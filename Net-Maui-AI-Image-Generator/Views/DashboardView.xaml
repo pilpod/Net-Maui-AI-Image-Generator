@@ -4,12 +4,37 @@
              x:Class="Net_Maui_AI_Image_Generator.Views.DashboardView"
              Title="DashboardView"
              BackgroundColor="#101216">
-    
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
-    
+
+    <Grid Margin="25,25,0,0" RowDefinitions=".1*,.2*,.45*,.1*">
+        <Grid Margin="0,0,25,0" ColumnDefinitions="*,*">
+            <VerticalStackLayout VerticalOptions="Center">
+                <Rectangle 
+                    Fill="#CACDD3"
+                    HeightRequest="2"
+                    HorizontalOptions="Start"
+                    WidthRequest="25"/>
+                <Rectangle 
+                    Margin="0,5,0,0"
+                    Fill="#CACDD3"
+                    HeightRequest="2"
+                    HorizontalOptions="Start"
+                    WidthRequest="35"/>
+            </VerticalStackLayout>
+            <Border
+                Grid.Column="1"
+                HeightRequest="75"
+                HorizontalOptions="End"
+                StrokeShape="RoundRectangle 80,80,80,80"
+                WidthRequest="75">
+                <Image 
+                    Aspect="AspectFill"
+                    HeightRequest="100"
+                    HorizontalOptions="Center"
+                    Source="profilesquare.jpg"
+                    WidthRequest="100"/>
+
+            </Border>
+        </Grid>
+    </Grid>
+
 </ContentPage>

@@ -1,4 +1,6 @@
-﻿namespace Net_Maui_AI_Image_Generator
+﻿using Net_Maui_AI_Image_Generator.Views;
+
+namespace Net_Maui_AI_Image_Generator
 {
     public partial class App : Application
     {
@@ -6,7 +8,7 @@
         {
             InitializeComponent();
 
-            MainPage = new AppShell();
+            MainPage = new DashboardView();
         }
     }
 }
