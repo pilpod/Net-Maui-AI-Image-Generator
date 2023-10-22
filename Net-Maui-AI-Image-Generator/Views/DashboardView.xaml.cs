@@ -52,7 +52,7 @@ public partial class DashboardView : ContentPage
             },
             new GeneratedImage
             {
-                ImagePath = "dashboard2.jpg",
+                ImagePath = "dashboard2_1000.jpg",
                 MainKeyword = "Mountains",
                 Keywords = new List<string>
                 {
@@ -61,7 +61,7 @@ public partial class DashboardView : ContentPage
             },
             new GeneratedImage
             {
-                ImagePath = "dashboard2.jpg",
+                ImagePath = "dashboard3_1000.jpg",
                 MainKeyword = "Robot",
                 Keywords = new List<string>
                 {

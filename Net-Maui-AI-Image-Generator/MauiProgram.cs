@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using PanCardView;
 
 namespace Net_Maui_AI_Image_Generator
 {
@@ -9,6 +10,7 @@ namespace Net_Maui_AI_Image_Generator
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
+                .UseCardsView()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");

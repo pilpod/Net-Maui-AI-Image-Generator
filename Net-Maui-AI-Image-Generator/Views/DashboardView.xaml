@@ -2,10 +2,12 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Net_Maui_AI_Image_Generator.Views.DashboardView"
+             xmlns:cards="clr-namespace:PanCardView;assembly=PanCardView"
+             xmlns:proc="clr-namespace:PanCardView.Processors;assembly=PanCardView"
              Title="DashboardView"
              BackgroundColor="#101216">
 
-    <Grid Margin="25,25,0,0" RowDefinitions=".1*,.2*,.45*,.1*">
+    <Grid Margin="25,25,0,0" RowDefinitions=".1*,.1*,.1*,.30*">
         <Grid Margin="0,0,25,0" ColumnDefinitions="*,*">
             <VerticalStackLayout VerticalOptions="Center">
                 <Rectangle 
@@ -55,7 +57,6 @@
             <CollectionView.ItemsLayout>
                 <LinearItemsLayout ItemSpacing="10" Orientation="Horizontal" />
             </CollectionView.ItemsLayout>
-
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <Grid
@@ -102,6 +103,32 @@
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
+        
+        <cards:CoverFlowView
+            Grid.Row="3"
+            Margin="-25,0,25,0"
+            ItemsSource="{Binding GeneratedImages}"
+            PositionShiftValue="125">
+            <x:Arguments>
+                <proc:CoverFlowProcessor OpacityFactor="0.25" ScaleFactor="0.75" />
+            </x:Arguments>
+
+            <cards:CoverFlowView.ItemTemplate>
+                <DataTemplate>
+                    <Border 
+                        StrokeShape="RoundRectangle 25,25,25,25"
+                        StrokeThickness="0">
+                        <Grid
+                            RowDefinitions=".7*,.3*">
+                            <Image 
+                                Grid.RowSpan="2"
+                                Aspect="AspectFill"
+                                Source="{Binding ImagePath}"/>
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </cards:CoverFlowView.ItemTemplate>
+        </cards:CoverFlowView>
     </Grid>
 
 </ContentPage>
