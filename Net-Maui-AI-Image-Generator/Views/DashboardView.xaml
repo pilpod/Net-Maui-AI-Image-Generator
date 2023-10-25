@@ -4,8 +4,15 @@
              x:Class="Net_Maui_AI_Image_Generator.Views.DashboardView"
              xmlns:cards="clr-namespace:PanCardView;assembly=PanCardView"
              xmlns:proc="clr-namespace:PanCardView.Processors;assembly=PanCardView"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              Title="DashboardView"
              BackgroundColor="#101216">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <toolkit:ListToStringConverter x:Key="ListToStringConverter" Separator="," />
+        </ResourceDictionary>
+    </ContentPage.Resources>
 
     <Grid Margin="25,25,0,0" RowDefinitions=".1*,.1*,.1*,.30*">
         <Grid Margin="0,0,25,0" ColumnDefinitions="*,*">
@@ -124,6 +131,24 @@
                                 Grid.RowSpan="2"
                                 Aspect="AspectFill"
                                 Source="{Binding ImagePath}"/>
+                            <Grid Grid.Row="1">
+                                <Rectangle 
+                                    Fill="Black"
+                                    Opacity=".5"
+                                    StrokeThickness="0"/>
+                                <VerticalStackLayout Margin="10,0,0,0" VerticalOptions="Center">
+                                    <Label 
+                                        FontFamily="OswaldBold"
+                                        FontSize="25"
+                                        Text="{Binding MainKeyword}"
+                                        TextColor="White"/>
+                                    <Label 
+                                        FontFamily="OswaldLight"
+                                        FontSize="15"
+                                        Text="{Binding Keywords, Converter={StaticResource ListToStringConverter}}"
+                                        TextColor="White"/>
+                                </VerticalStackLayout>
+                            </Grid>
                         </Grid>
                     </Border>
                 </DataTemplate>
