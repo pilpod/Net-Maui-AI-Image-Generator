@@ -14,7 +14,7 @@
         </ResourceDictionary>
     </ContentPage.Resources>
 
-    <Grid Margin="25,25,0,0" RowDefinitions=".1*,.1*,.1*,.30*">
+    <Grid Margin="25,25,0,0" RowDefinitions=".1*,.1*,.1*,.30*,.05*">
         <Grid Margin="0,0,25,0" ColumnDefinitions="*,*">
             <VerticalStackLayout VerticalOptions="Center">
                 <Rectangle 
@@ -44,6 +44,7 @@
 
             </Border>
         </Grid>
+        
         <VerticalStackLayout Grid.Row="1" VerticalOptions="Center" >
             <Label 
                 FontFamily="OswaldBold"
@@ -57,6 +58,7 @@
                 Text="Join your friends"
                 TextColor="#ACB1BB"/>
         </VerticalStackLayout>
+        
         <CollectionView 
             Grid.Row="2"
             ItemsSource="{Binding Profiles}"
@@ -154,6 +156,20 @@
                 </DataTemplate>
             </cards:CoverFlowView.ItemTemplate>
         </cards:CoverFlowView>
+
+        <Border
+            Grid.Row="4"
+            Margin="0,15,0,0"
+            HorizontalOptions="End"
+            StrokeShape="RoundRectangle 55,0,0,0"
+            WidthRequest="250">
+            <Button 
+                BackgroundColor="#E8FF8E"
+                FontFamily="OswaldBold"
+                FontSize="16"
+                Text="Create new Image"
+                TextColor="#101216"/>
+        </Border>
     </Grid>
 
 </ContentPage>
