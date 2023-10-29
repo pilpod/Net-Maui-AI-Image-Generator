@@ -1,6 +1,7 @@
 ﻿using CommunityToolkit.Maui;
 using Microsoft.Extensions.Logging;
 using PanCardView;
+using SkiaSharp.Views.Maui.Controls.Hosting;
 
 namespace Net_Maui_AI_Image_Generator
 {
@@ -12,6 +13,7 @@ namespace Net_Maui_AI_Image_Generator
             builder
                 .UseMauiApp<App>()
                 .UseCardsView()
+                .UseSkiaSharp()
                 .UseMauiCommunityToolkit()
                 .ConfigureFonts(fonts =>
                 {

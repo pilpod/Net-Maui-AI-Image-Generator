@@ -91,7 +91,7 @@
             StrokeShape="RoundRectangle 20,20,20,20"
             StrokeThickness="0">
             <Editor 
-                Margin="5"
+                Margin="15,5"
                 BackgroundColor="#242529"
                 TextColor="White"/>
         </Border>
