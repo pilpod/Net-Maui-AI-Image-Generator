@@ -5,7 +5,7 @@
              Title="GenerationOptionsView"
              BackgroundColor="#101216">
 
-    <Grid Margin="25,25,0,0" RowDefinitions=".2*,.1*,.05*,.3*,.2*,.1*">
+    <Grid Margin="25,25,0,0" RowDefinitions=".15*,.1*,.05*,.3*,.2*,.1*">
         <VerticalStackLayout VerticalOptions="Center">
             <Label 
                 FontFamily="OswaldBlack"
@@ -95,6 +95,17 @@
                 BackgroundColor="#242529"
                 TextColor="White"/>
         </Border>
+
+        <Button Grid.Row="5"
+                BackgroundColor="#98C0FE"
+                WidthRequest="200"
+                CornerRadius="50"
+                Text="Generate"
+                TextColor="Black"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+            />
+
     </Grid>
     
 </ContentPage>
