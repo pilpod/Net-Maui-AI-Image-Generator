@@ -1,4 +1,3 @@
-using Microsoft.Maui.Controls.Compatibility.Platform.Android;
 using Net_Maui_AI_Image_Generator.Models;
 
 namespace Net_Maui_AI_Image_Generator.Views;
@@ -14,7 +13,8 @@ public partial class GenerationOptionsView : ContentPage
         FillOptions();
         BindingContext = this;
 
-        ModifyEntry();
+        //ModifyEntry();
+        ModifyControls();
     }
 
     private void FillOptions()
@@ -36,13 +36,20 @@ public partial class GenerationOptionsView : ContentPage
 
     }
 
-    public void ModifyEntry()
+    public void ModifyControls()
     {
-        Microsoft.Maui.Handlers.EntryHandler.Mapper.AppendToMapping("MyCustomization", (handler, view) =>
+        Microsoft.Maui.Handlers.EditorHandler.Mapper.AppendToMapping("EditorCustomization", (handler, view) =>
         {
 #if ANDROID
-            handler.PlatformView.BackgroundTintList = Android.Content.Res.ColorStateList.ValueOf(Colors.Transparent.ToAndroid());
+            handler.PlatformView.SetBackgroundColor(Android.Graphics.Color.Transparent);
 #endif
         });
+
+        /*Microsoft.Maui.Handlers.PickerHandler.Mapper.AppendToMapping("PickerCustomization", (handler, view) =>
+        {
+#if ANDROID
+            handler.PlatformView.SetBackgroundColor(Android.Graphics.Color.Transparent);
+#endif
+        });*/
     }
 }
