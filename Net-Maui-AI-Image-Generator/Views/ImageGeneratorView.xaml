@@ -31,7 +31,7 @@
                         StrokeShape="RoundRectangle 5,5,5,5"
                         StrokeThickness="0"/>
                     <Label 
-                        x:Name="seconds"
+                        x:Name="lblTimer"
                         FontSize="20"
                         Text="0"
                         TextColor="#ACB1BB"
@@ -71,14 +71,13 @@
 
         <Button 
             x:Name="btnFinish"
-            Clicked="btnFinish_Clicked"
             Grid.Row="2"
             BackgroundColor="#E8FF8E"
             CornerRadius="35"
             FontSize="25"
             HeightRequest="75"
             HorizontalOptions="Center"
-            Scale="0.1"
+            Scale="0"
             Text="Finish"
             TextColor="#101216"
             VerticalOptions="Center"

@@ -164,6 +164,7 @@
             StrokeShape="RoundRectangle 55,0,0,0"
             WidthRequest="250">
             <Button 
+                Clicked="BtnCreateNewImage"
                 BackgroundColor="#E8FF8E"
                 FontFamily="OswaldBold"
                 FontSize="16"

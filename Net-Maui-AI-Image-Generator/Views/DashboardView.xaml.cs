@@ -1,3 +1,4 @@
+using AndroidX.Navigation;
 using Net_Maui_AI_Image_Generator.Models;
 using System.Collections.ObjectModel;
 
@@ -14,6 +15,11 @@ public partial class DashboardView : ContentPage
 		LoadData();
 		BindingContext = this;
 	}
+
+    private void BtnCreateNewImage(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new GenerationOptionsView());
+    }
 
     private void LoadData()
     {

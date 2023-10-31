@@ -8,7 +8,7 @@ namespace Net_Maui_AI_Image_Generator
         {
             InitializeComponent();
 
-            MainPage = new ImageGeneratorView();
+            MainPage = new NavigationPage(new DashboardView());
         }
     }
 }
